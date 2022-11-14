@@ -1,31 +1,27 @@
-html, body {
+body > div{
+    border:1px solid grey;
+}
+html, body, #container {
     height:100%;
     width:100%;
     margin:0;
     padding:0;
 }
+#container {
+    overflow:hidden;
+    position:relative;
+}
 #hideMe {
-    -moz-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 5s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+    -webkit-animation: cssAnimation 25s forwards; 
+    animation: cssAnimation 25s forwards;
 }
 @keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        overflow:hidden;
-    }
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
 }
 @-webkit-keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        visibility:hidden;
-    }
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
 }
