@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css">
-  <script src="autoplay.js"></script>
 </head>
-<body>
-  <div id='hideMe'>
-    <video controls="" autoplay="" preload="auto" id="idvideo">
-      <source type="video/mp4" src="intro.mp4">
-      Votre navigateur ne supporte pas la balise HTML5 video.
-    </video>
+ <body>
+  <video id="myVideo" style="width=100%;height=100vh" controls autoplay>
+    <source src="intro.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myVideo").autoplay;
+    document.getElementById("demo").innerHTML = x;
+  }
+  </script>
    </div>
   <meta http-equiv="refresh" content="25;url=https://sites.google.com/cssdd.ca/les-gars/" />
 </body>
