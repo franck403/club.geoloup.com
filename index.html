@@ -3,10 +3,20 @@
 <head>
 </head>
  <body>
-  <video autoplay>
+  <video id="myvideo" autoplay>
     <source src="intro.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-  <meta http-equiv="refresh" content="25;url=https://sites.google.com/cssdd.ca/les-gars/" />
+  <meta http-equiv="refresh" content="26;url=https://sites.google.com/cssdd.ca/les-gars/" />
+  <script>
+var elem = document.getElementById("myvideo");
+ if (elem.requestFullscreen) {
+   elem.requestFullscreen();
+ } else if (elem.webkitRequestFullscreen) { /* Safari */
+   elem.webkitRequestFullscreen();
+ } else if (elem.msRequestFullscreen) { /* IE11 */
+   elem.msRequestFullscreen();
+ }
+</script>
 </body>
 </html>
