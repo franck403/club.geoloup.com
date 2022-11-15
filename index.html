@@ -27,7 +27,7 @@
 </style>
 </head>
  <body>
-  <video class="video-container" id="video" onclick="playvid()" onended="myFunction()">
+  <video class="video-container" id="video" onclick="play()" onended="myFunction()">
     <source src="intro.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -35,7 +35,7 @@
     function myFunction() {
       location.href = 'https://sites.google.com/cssdd.ca/les-gars/';
     }
-    function playVid() { 
+    function play() { 
       document.getElementById('video').play();
    } 
 </script>
