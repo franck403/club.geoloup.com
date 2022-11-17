@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>.video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 98%;
+  height: 98%; 
+  overflow: hidden;
+}
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 98%; 
+  min-height: 98%; 
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+</style>
+</head>
+ <body>
+  <video class="video-container" id="video" onclick="play()" onended="myFunction()">
+    <source src="https://drive.google.com/file/d/1w_Ysnl208ld-HieG3MPktSjvdTm3uz2F/preview" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+<script type='text/javascript'>
+    function myFunction() {
+      location.href = 'https://sites.google.com/cssdd.ca/les-gars/';
+    }
+    function play() { 
+      document.getElementById('video').play();
+   } 
+</script>
+
+</body>
+</html>
